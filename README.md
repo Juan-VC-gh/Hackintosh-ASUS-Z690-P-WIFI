@@ -1,12 +1,19 @@
 Alder Lake Hackintosh!
 
 Specs:
+
 Motherboard: ASUS PRIME Z690-P WIFI -> Comes with codec ALC897
 Processor: Intel Core i7-12700K
-GPU: AMD RX 6600 XT -> Intel's 12th gen iGPU is not supported as there are no real Macs with any Alder Lake CPU hence no iGPU drivers. Some Navi 2 GPU drivers were added on macOS 11.4 like RX 6800, RX 6800 XT, RX 6900 XT while for RX 6600 and RX 6600 XT drivers were added on macOS 12.1, thus minimum install version for this setup.
+
+GPU: MSI AMD RX 6600 XT MECH 2X -> Intel's 12th gen iGPU is not supported as there are no real Macs with any Alder Lake CPU hence no iGPU drivers. Some Navi 2 GPU drivers were added on macOS 11.4 like RX 6800, RX 6800 XT, RX 6900 XT while for RX 6600 and RX 6600 XT drivers were added on macOS 12.1, thus minimum install version for this setup
+
 SSDs: 2x WD_BLACK SN850 1TB
+
 RAM: 2x Kingston Fury Beast 16GB DDR5 5200 MHz
+
 WIFI + BT: Fenvi T919 -> Packs a BCM94360CD which is natively supported for seamlessly support
+
+
 
 Short-guide (for experimented users):
 
