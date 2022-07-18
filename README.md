@@ -15,7 +15,7 @@ RAM: 2x Kingston Fury Beast 16GB DDR5 5200 MHz
 WIFI + BT: Fenvi T919 -> Packs a BCM94360CD which is natively supported (the chipset is used in real Macs) for seamlessly support
 
 What works?
-- Everything I can think of except digital board audio output (custom AppleALC codec layout id is needed for this) -> ALC 897
+- Everything I can think of (Wifi + BT + sleep + DRM content + Apple services + jack audio + DP/HDMI audio, etc) except digital on-board audio output (custom AppleALC codec layout id is needed for this) -> ALC 897
 
 Short-guide (for experimented users):
 
