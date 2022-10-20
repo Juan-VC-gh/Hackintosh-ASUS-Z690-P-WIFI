@@ -45,6 +45,8 @@ Short-guide (for experimented users):
 
 9. When you finally boot macOS make sure to setup configure correctly the unique values each mac comes to access Apple services like AppStore, FaceTime, iMessage, etc -> This is usually found on the internet like "hackintosh fix apple services" or similar
 
+10. In macOS, go to System Preferences -> Energy Saver -> In the Power Section **ONLY** have enabled "Put hard disks to sleep when possible". This is because **"Wake for network access" causes sleep issues** and the other options disabled are optional but it is better that way for power saving
+
 10. To make the setup USB-independent, in macOS terminal:
 	```
 	diskutil list
