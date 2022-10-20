@@ -57,7 +57,8 @@ Short-guide (for experimented users):
 11. Copy the BOOT and OC directories from the repo into the EFI directory from the system partition
 
 12. Create a boot-entry that points to OpenCore.efi -> This can be achieved using [DiskGenius](https://www.diskgenius.com/how-to/manage-uefi-boot-options.php)
-	**Tip:**Within the OpenCore boot menu move with the arrow keys and highglight your preferred default entry to boot by default and then set it by holding the 
+	
+	**Tip:** Within the OpenCore boot menu move with the arrow keys and highglight your preferred default entry to boot by default and then set it by holding the 
 	ctrl key and then press enter
 
 13. Enjoy macOS on non-Apple hardware :)
