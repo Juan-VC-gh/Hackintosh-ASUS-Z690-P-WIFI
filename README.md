@@ -19,14 +19,41 @@ What works?
 
 Short-guide (for experimented users):
 
-0. Boot into UEFI and load default (or optimized settings as it is shown) then move to step 1
-1. diskutil list
-2. diskutil partitionDisk /dev/disk# GPT JHFS+ "USB" 100%
-3. sudo "/Applications/Install macOS Monterey.app/Contents/Resources/createinstallmedia" --volume /Volumes/USB
-4. Copy EFI folder to the EFI partition from the USB
-5. Create a boot-entry that points to OpenCore.efi -> This can be achieved for using Hasleo EasyUEFI
-6. In OpenCore menu press space bar, scroll & open CFGLock.efi tool
-7. It will find the CFGLock variable offset, accept to toggle its value to turn it off as it cannot be changed from the firmware settings
-8. Boot the installer and proceed normally
+1. Update the UEFI to v2014 (released on Oct 19, 2022). The BIOS update file can be found inside the UEFI Updates directory or download directly from [ASUS](https://dlcdnets.asus.com/pub/ASUS/mb/BIOS/PRIME-Z690-P-WIFI-ASUS-2014.zip). Boot into UEFI and load default (or optimized settings as it is shown)
+
+2. In the UEFI GUI navigate to 
+    * Advanced -> System Agent (SA) Configuration -> Graphics Configuration -> set Primary Display: Auto and iGPU Multi-monitor: Enabled (required)
+    * Also within the UEFI, enable XMP to take max advantage of the RAM (optional)
+
+3. Using macOS terminal:
+	``` 
+	diskutil list
+	diskutil partitionDisk /dev/diskU GPT JHFS+ "USB" 100%
+	sudo "/Applications/Install macOS Monterey.app/Contents/Resources/createinstallmedia" --volume /Volumes/USB 
+	```
+	**Note:** Replace **U** in /dev/disk**U** with the USB disk number
+
+4. Copy EFI folder to the EFI partition of the USB
+
+5. Boot OpenCore from the USB pressing "F8" when the system starts
+
+6. ~~In OpenCore menu press space bar, scroll & open CFGLock.efi tool~~   -> CFGLock variable seems to be missing from the firmware past UEFI v1603 and CPU register MSR 0xE2 can be written in order to achieve native PM (power management)
+
+7. ~~It will find the CFGLock variable offset, accept to toggle its value to turn it off as it cannot be changed from the firmware settings~~   -> CFGLock variable seems to be missing from the firmware past UEFI v1603 and CPU register MSR 0xE2 can be written in order to achieve native PM (power management)
+
+8. Boot the installer and proceed normally as a Mac following the instructions
+
 9. When you finally boot macOS make sure to setup configure correctly the unique values each mac comes to access Apple services like AppStore, FaceTime, iMessage, etc -> This is usually found on the internet like "hackintosh fix apple services" or similar
-10. Enjoy macOS on non-Apple hardware :)
+
+10. To make the setup USB-independent, in macOS terminal:
+	```
+	diskutil list
+	sudo diskutil mount /dev/diskUsV
+	```   
+	**Note:** Replace **U** with the disk number and **V** with the partition identifier of the system's EFI partition in /dev/disk**U**s**V**
+
+11. Copy the BOOT and OC directories from the repo into the EFI directory from the system partition
+
+12. Create a boot-entry that points to OpenCore.efi -> This can be achieved using [DiskGenius](https://www.diskgenius.com/how-to/manage-uefi-boot-options.php)
+
+13. Enjoy macOS on non-Apple hardware :)
