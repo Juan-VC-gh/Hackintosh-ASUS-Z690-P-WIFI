@@ -58,7 +58,7 @@ Short-guide (for experimented users):
 
 12. Create a boot-entry that points to OpenCore.efi -> This can be achieved using [DiskGenius](https://www.diskgenius.com/how-to/manage-uefi-boot-options.php)
 	
-	**Tip:** Within the OpenCore boot menu move with the arrow keys and highglight your preferred default entry to boot by default and then set it by holding the 
+	**Tip:** Within the OpenCore boot menu move with the arrow keys and highlight your preferred default entry to boot by default and then set it by holding the 
 	ctrl key and then press enter
 
 13. Enjoy macOS on non-Apple hardware :)
