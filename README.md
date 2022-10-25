@@ -29,7 +29,7 @@ Short-guide (for experimented users):
 	``` 
 	diskutil list
 	diskutil partitionDisk /dev/diskU GPT JHFS+ "USB" 100%
-	sudo "/Applications/Install macOS Monterey.app/Contents/Resources/createinstallmedia" --volume /Volumes/USB 
+	sudo "/Applications/Install macOS Ventura.app/Contents/Resources/createinstallmedia" --volume /Volumes/USB 
 	```
 	**Note:** Replace **U** in /dev/disk**U** with the USB disk number
 
